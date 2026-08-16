@@ -1,0 +1,344 @@
+
+.about-banner{
+    width:100%;
+    height:100vh;
+
+    background-image:url("./image/contact.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+
+.about-banner::before{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.35);
+}
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+    background:white;
+font: bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.15);
+
+   
+     background:transparent;
+   
+}
+
+.logo{
+width:90px;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+.navbar a{
+text-decoration:none;
+color:#000;
+font-size:22px;
+}
+
+.about-overlay{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+}
+
+.about-overlay h1{
+    font-size:75px;
+    margin-bottom:20px;
+}
+
+.about-overlay p{
+    font-size:30px;
+}
+
+.about{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    background:#fdf9f8;
+    gap:50px;
+}
+
+/* Image */
+
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:480px;
+}
+
+/* Text */
+
+.about-content{
+    flex:1.2;
+}
+
+.story{
+    color:#c98b63;
+    letter-spacing:5px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.about-content h1{
+    font-size:60px;
+    color:#222;
+    margin:20px 0;
+    line-height:1.2;
+}
+
+.line{
+    width:70px;
+    height:5px;
+    background:#d97a9d;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.about-content p{
+    color:#555;
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:30px;
+        background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+}
+
+/* Button */
+
+.about-btn{
+    flex:.7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-btn button{
+    padding:20px 35px;
+    background:#e684a6;
+    color:white;
+    border:black;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:500;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(230,132,166,.4);
+}
+
+.about-btn button:hover{
+    transform:translateY(-5px);
+    background:#d86d95;
+}
+.about-image{
+    overflow: hidden;
+}
+
+.about-image img{
+    width: 100%;
+    max-width: 450px;
+}
+
+@keyframes reveal{
+    to{
+        transform: translateX(0);
+    }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia, serif;
+    background:#fff8f7;
+}
+
+.features{
+
+    width:100%;
+    height:10%;
+    margin:80px auto;
+    padding:120px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.card{
+
+    background:white;
+    border-radius:25px;
+
+    text-align:center;
+
+    padding:55px 60px;
+
+    box-shadow:0 15px 35px rgba(245,180,190,.25);
+
+  
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* Shine Effect */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:rgba(255,255,255,.5);
+
+  
+
+}
+
+.card:hover::before{
+
+    left:150%;
+
+}
+
+/* Hover */
+
+.card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:0 25px 45px rgba(245,130,170,.35);
+
+}
+
+/* Icon Circle */
+
+.icon{
+
+    width:80px;
+    height:80px;
+
+    background:#ffe2eb;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:25px;
+
+    transition:.5s;
+
+    box-shadow:0 10px 20px rgba(255,180,200,.4);
+
+}
+
+.card:hover .icon{
+
+    transform:rotate(360deg) scale(1.15);
+
+    background:#ffcadb;
+
+}
+
+.card h2{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    color:#222;
+
+}
+
+.card p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+}
